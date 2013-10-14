@@ -1,7 +1,3 @@
-# TODO: rebuilding grub2.cfg, see below
-# TODO: arch?  probably not x86, x86_64 specific
-# TODO: BuildRequires?
-
 # I versioned this based on upsteam iPXE (www.ipxe.org) which is used to generate
 # the "bfo.lkrn" file.  Specifically, I used iPXE from git commit:
 #      7405685df2bea9a457970d8b5a63ede08fcda6f7
@@ -67,7 +63,7 @@ rm -rf %{buildroot}
 %files
 %doc README
 /boot/*
-# in etc but not a config file?  (https://fedoraproject.org/wiki/Packaging:Guidelines?rd=Packaging/Guidelines#Configuration_files)
+# in etc but not a config file (?) (https://fedoraproject.org/wiki/Packaging:Guidelines?rd=Packaging/Guidelines#Configuration_files)
 %{_sysconfdir}/grub.d/20_bfo
 
 

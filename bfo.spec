@@ -1,6 +1,14 @@
 # I versioned this based on upsteam iPXE (www.ipxe.org) which is used to generate
 # the "bfo.lkrn" file.  Specifically, I used iPXE from git commit:
 #      7405685df2bea9a457970d8b5a63ede08fcda6f7
+# Here are the commands to regenerate Source0:
+#    git clone git://git.ipxe.org/ipxe.git
+#    cd ipxe
+#    git log   <check date and rev>
+#    cd ..
+#    mv ipxe ipxe-1.0.0.20130925git7405685df
+#    tar -jcvf ipxe-1.0.0.20130925git7405685df.tar.bz2 ipxe-1.0.0.20130925git7405685df
+#    mv ipxe*.tar.bz2 ~/rpmbuild/SOURCES
 
 %global checkout 20130925git7405685df
 

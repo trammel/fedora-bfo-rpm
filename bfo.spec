@@ -35,9 +35,9 @@ to a pxeboot environment.
 
 %prep
 %setup -q -n ipxe-%{version}.%{checkout}
-cp -p %{_sourcedir}/bfo-script0.ipxe %{_builddir}/ipxe-%{version}.%{checkout}/src/script0.ipxe
+cp -p %{SOURCE1} %{_builddir}/ipxe-%{version}.%{checkout}/src/script0.ipxe
 # there already is a ipxe README, but we want our own
-cp -p -f %{_sourcedir}/bfo-README %{_builddir}/ipxe-%{version}.%{checkout}/README
+cp -p -f %{SOURCE3} %{_builddir}/ipxe-%{version}.%{checkout}/README
 
 
 %build
@@ -56,7 +56,7 @@ mkdir -p %{buildroot}/etc/grub.d
 install -m644 src/bin/ipxe.lkrn %{buildroot}/boot/bfo.lkrn
 
 mkdir -p %{buildroot}%{_sysconfdir}/grub.d
-install -m755 %{_sourcedir}/bfo-etc_grubd_20_bfo %{buildroot}%{_sysconfdir}/grub.d/20_bfo
+install -m755 %{SOURCE2} %{buildroot}%{_sysconfdir}/grub.d/20_bfo
 
 %post
 # TODO: is this the "correct way" to rebuild the grub file?

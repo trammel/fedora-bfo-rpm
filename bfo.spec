@@ -76,5 +76,5 @@ rm -rf %{buildroot}
 
 
 %changelog
-* Mon Oct 7 2013 Colin Macdonald <cbm[at]m[dot]fsf[dot]org> - 1.0.0-20131096-git7405685
+* Mon Oct 7 2013 Colin Macdonald <cbm[at]m[dot]fsf[dot]org> - 1.0.0-1.20130925git7405685df
 - Initial version

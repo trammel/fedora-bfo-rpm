@@ -1,6 +1,7 @@
 #!ipxe
 set 209:string pxelinux.cfg/default
 set 210:string http://dl.fedoraproject.org/pub/alt/bfo/
+set dns 8.8.8.8
 dhcp || goto manualnet
 chain http://dl.fedoraproject.org/pub/alt/bfo/pxelinux.0
 :manualnet

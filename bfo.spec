@@ -7,16 +7,16 @@
 #    cd ipxe
 #    git log   <check date and rev>
 #    cd ..
-#    mv ipxe ipxe-1.0.1.20131209git8f0173b5c
-#    tar -jcvf ipxe-1.0.1.20131209git8f0173b5c.tar.bz2 ipxe-1.0.1.20131209git8f0173b5c
+#    mv ipxe ipxe-1.0.0.20131209git8f0173b5c
+#    tar -jcvf ipxe-1.0.0.20131209git8f0173b5c.tar.bz2 ipxe-1.0.0.20131209git8f0173b5c
 #    mv ipxe*.tar.bz2 ~/rpmbuild/SOURCES
 
 %global checkout 20131209git8f0173b5c
 
 
 Name:     bfo
-Version:  1.0.1
-Release:  1.%{checkout}%{?dist}
+Version:  1.0.0
+Release:  2.%{checkout}%{?dist}
 # http://ipxe.org/licensing
 License:  GPLv2 and GPLv2+ and BSD
 Summary:  Boot network images from boot.fedoraproject.org (BFO)
@@ -78,7 +78,7 @@ rm -rf %{buildroot}
 
 
 %changelog
-* Wed Dec 18 2013 Jonathon Padfield <jonathon.padfield@gmail.com> - 1.0.1-1.20131209git8f0173b5c
+* Wed Dec 18 2013 Jonathon Padfield <jonathon.padfield@gmail.com> - 1.0.0-2.20131209git8f0173b5c
 - Added necessary BuildRequire entries.
 - Bumped to newer build for ipxe 8f0173b5c
 * Mon Oct 7 2013 Colin Macdonald <cbm[at]m[dot]fsf[dot]org> - 1.0.0-1.20130925git7405685df

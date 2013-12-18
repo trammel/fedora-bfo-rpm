@@ -2,6 +2,6 @@
 exec tail -n +3 $0
 
 menuentry 'boot.fedoraproject.org: network boot' --class gnu-linux --class gnu --class os {
-        linux16 /boot/bfo.lkrn
+        linux16 /bfo.lkrn
 }
 

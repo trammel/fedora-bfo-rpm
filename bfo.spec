@@ -1,20 +1,21 @@
 # I versioned this based on upsteam iPXE (www.ipxe.org) which is used to generate
 # the "bfo.lkrn" file.  Specifically, I used iPXE from git commit:
+#      8f0173b5c8ac6de9e9fa8115e37357c2aeb88101
 #      7405685df2bea9a457970d8b5a63ede08fcda6f7
 # Here are the commands to regenerate Source0:
 #    git clone git://git.ipxe.org/ipxe.git
 #    cd ipxe
 #    git log   <check date and rev>
 #    cd ..
-#    mv ipxe ipxe-1.0.0.20130925git7405685df
-#    tar -jcvf ipxe-1.0.0.20130925git7405685df.tar.bz2 ipxe-1.0.0.20130925git7405685df
+#    mv ipxe ipxe-1.0.1.20131209git8f0173b5c
+#    tar -jcvf ipxe-1.0.1.20131209git8f0173b5c.tar.bz2 ipxe-1.0.1.20131209git8f0173b5c
 #    mv ipxe*.tar.bz2 ~/rpmbuild/SOURCES
 
-%global checkout 20130925git7405685df
+%global checkout 20131209git8f0173b5c
 
 
 Name:     bfo
-Version:  1.0.0
+Version:  1.0.1
 Release:  1.%{checkout}%{?dist}
 # http://ipxe.org/licensing
 License:  GPLv2 and GPLv2+ and BSD
@@ -25,6 +26,7 @@ Source1:  bfo-script0.ipxe
 Source2:  bfo-etc_grubd_20_bfo
 Source3:  bfo-README
 Requires: grub2
+BuildRequires: syslinux, mkisofs
 
 
 %description
@@ -76,5 +78,8 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Wed Dec 18 2013 Jonathon Padfield <jonathon.padfield@gmail.com> - 1.0.1-1.20131209git8f0173b5c
+- Added necessary BuildRequire entries.
+- Bumped to newer build for ipxe 8f0173b5c
 * Mon Oct 7 2013 Colin Macdonald <cbm[at]m[dot]fsf[dot]org> - 1.0.0-1.20130925git7405685df
 - Initial version
